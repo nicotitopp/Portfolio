@@ -3,8 +3,19 @@
 */
 
 .beams-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1;
+  pointer-events: none; /* let clicks pass through */
+}
+
+/* Ensure the underlying canvas fills the wrapper */
+.beams-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
   
