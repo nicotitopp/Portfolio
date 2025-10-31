@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Use Figtree as the global font (loaded in index.html) */
+html, body, #root {
+	font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
