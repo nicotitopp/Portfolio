@@ -87,9 +87,8 @@ const Home: React.FC = () => {
                     {/* Right column: avatar box where you can drop /public/Avatar.png */}
                     <div className="w-72 md:w-96 shrink-0 cursor-target">
                         <div className="w-full h-72 md:h-96 bg-gray-900/30 border border-white/10 rounded-lg overflow-hidden flex items-center justify-center">
-                            {/* Image file should be placed at public/Avatar.png or served at /Avatar.png */}
                             <img
-                                src="public\Avatar.png"
+                                src="/Avatar.png"
                                 alt="Avatar"
                                 className="w-full h-full object-cover"
                             />
