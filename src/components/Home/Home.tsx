@@ -92,10 +92,6 @@ const Home: React.FC = () => {
                                 src="public\Avatar.png"
                                 alt="Avatar"
                                 className="w-full h-full object-cover"
-                                onError={(e) => {
-                                    // If Avatar.png is missing show a subtle placeholder
-                                    (e.currentTarget as HTMLImageElement).src = '/placeholder-avatar.png';
-                                }}
                             />
                         </div>
                     </div>
