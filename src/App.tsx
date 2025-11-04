@@ -1,7 +1,7 @@
-import TargetCursor from './Animations/TargetCursor/TargetCursor'
-import Beams from './Backgrounds/Beams/Beams'
-import Home from './components/Home/Home'
-import Nav from './components/Nav/Nav'
+import TargetCursor from './React/TargetCursor/TargetCursor'
+import Beams from './React/Beams/Beams'
+import Home from './components/Home'
+import Nav from './components/Nav'
 
 function App() {
   return (

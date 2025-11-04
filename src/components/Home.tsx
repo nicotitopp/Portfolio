@@ -1,6 +1,6 @@
 import React from 'react';
-import BlurText from '../../TextAnimations/BlurText/BlurText';
-import AnimatedContent from '../../Animations/AnimatedContent/AnimatedContent';
+import BlurText from '../React/BlurText/BlurText';
+import AnimatedContent from '../React/AnimatedContent/AnimatedContent';
 
 const Home: React.FC = () => {
     return (
