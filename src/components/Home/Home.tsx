@@ -11,9 +11,7 @@ const Home: React.FC = () => {
                     <div className="flex-1 md:pr-8">
                         <p className="cursor-target text-2xl text-gray-300 max-w-xl mb-6">
                             <BlurText
-                                    text="Hey there! I’m a passionate frontend developer who loves bringing ideas to life through clean,
-                                    interactive, and visually engaging web experiences. I focus on building modern, responsive, and fast interfaces
-                                    using the latest web technologies."
+                                    text= "Hey there! I'm a passionate frontend developer who loves bringing ideas to life through clean, interactive, and visually engaging web experiences. I focus on building modern, responsive, and fast interfaces using the latest web technologies."
                                     delay={80}
                                     animateBy="words"
                                     direction="bottom"
