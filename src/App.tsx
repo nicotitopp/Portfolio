@@ -2,6 +2,7 @@ import TargetCursor from './React/TargetCursor/TargetCursor'
 import Beams from './React/Beams/Beams'
 import Home from './components/Home'
 import Nav from './components/Nav'
+import About from './components/About'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         />
         <main>
           <Home />
+          <About />
         </main>
       </div>
     </>

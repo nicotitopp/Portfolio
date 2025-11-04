@@ -1,6 +1,26 @@
 import React from 'react';
+import LogoLoop from '../React/LogoLoop/LogoLoop';
 import BlurText from '../React/BlurText/BlurText';
 import AnimatedContent from '../React/AnimatedContent/AnimatedContent';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,  SiJavascript  } from 'react-icons/si';
+
+const techColors: Record<string, string> = {
+    React: "#ffffff",
+    Next: "#ffffff",
+    TypeScript: "#ffffff",
+    Tailwind: "#ffffff",
+    JavaScript: "#ffffff"
+};
+
+const techLogos = [
+    { node: <SiReact />, title: "React" },
+    { node: <SiNextdotjs />, title: "Next.js" },
+    { node: <SiTypescript />, title: "TypeScript" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS" },
+    { node: <SiJavascript />, title: "JavaScript" }
+];
+
+
 
 const Home: React.FC = () => {
     return (
@@ -93,6 +113,28 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                 </div>
+                <div className="mt-20">
+                    <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+                        <LogoLoop
+                            logos={techLogos.map((logo) => ({
+                                ...logo,
+                                node: React.cloneElement(logo.node, {
+                                className: `transition-colors duration-300 hover:scale-110`,
+                                style: { color: techColors[logo.title.split(" ")[0]] || "#fff" }
+                                }),
+                            }))}
+                            speed={50}
+                            direction="left"
+                            logoHeight={45}
+                            gap={65 }
+                            pauseOnHover
+                            scaleOnHover
+                            fadeOut
+                            fadeOutColor="#000000"
+                        />
+                    </div>
+                </div>
+                
             </div>
         </section>
     );
