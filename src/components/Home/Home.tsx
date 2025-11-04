@@ -89,7 +89,7 @@ const Home: React.FC = () => {
                         <div className="w-full h-72 md:h-96 bg-gray-900/30 border border-white/10 rounded-lg overflow-hidden flex items-center justify-center">
                             {/* Image file should be placed at public/Avatar.png or served at /Avatar.png */}
                             <img
-                                src="src\Imagen\Avatar.png"
+                                src="public\Avatar.png"
                                 alt="Avatar"
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
