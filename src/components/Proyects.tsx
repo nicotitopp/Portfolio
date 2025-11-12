@@ -83,7 +83,7 @@ const Projects: React.FC = () => {
             title: "El Naranjal",
             description: "El Naranjal es la página web oficial del restaurante del mismo nombre, un lugar donde la tradición y el sabor se encuentran.Este proyecto fue diseñado para ofrecer una experiencia agradable, moderna y fácil de navegar, mostrando el menú, la historia del restaurante y las opciones de contacto.",
             tags: ["HTML5", "CSS3", "Bootstrap 5", "JavaScript"],
-            imageUrl: "public/imagenProyecto1.png",
+            imageUrl: "/imagenProyecto1.png",
             liveUrl: "https://www.restauranteelnaranjal.com/",
             githubUrl: "https://github.com/nicotitopp/ElNaranjal.git",
         },
