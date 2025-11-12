@@ -2,7 +2,7 @@ import React from 'react';
 import LogoLoop from '../React/LogoLoop/LogoLoop';
 import BlurText from '../React/BlurText/BlurText';
 import AnimatedContent from '../React/AnimatedContent/AnimatedContent';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,  SiJavascript  } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,  SiJavascript, SiBootstrap, SiMysql, SiHtml5, SiCss3, SiMongodb, SiFigma    } from 'react-icons/si';
 
 const techColors: Record<string, string> = {
     React: "#ffffff",
@@ -17,14 +17,21 @@ const techLogos = [
     { node: <SiNextdotjs />, title: "Next.js" },
     { node: <SiTypescript />, title: "TypeScript" },
     { node: <SiTailwindcss />, title: "Tailwind CSS" },
-    { node: <SiJavascript />, title: "JavaScript" }
+    { node: <SiJavascript />, title: "JavaScript" },
+    { node: <SiBootstrap />, title: "Bootstrap" },
+    { node: <SiMysql />, title: "Mysql" },
+    { node: <SiHtml5 />, title: "Html5" },
+    { node: <SiCss3 />, title: "Css3 " },
+    { node: <SiMongodb />, title: "Mongodb " },
+    { node: <SiFigma />, title: "Figma " }
+
 ];
 
 
 
 const Home: React.FC = () => {
     return (
-        <section className="min-h-screen flex items-center px-6 md:px-12">
+        <section className="min-h-screen flex items-center px-6 md:px-12 mt-20">
             <div className="max-w-7xl w-full mx-auto">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                     {/* Left column: paragraph + title (you can edit the paragraph below) */}
@@ -113,8 +120,8 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-20">
-                    <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+                <div className="mt-40">
+                    <div style={{ height: '100px', position: 'relative', overflow: 'hidden'}}>
                         <LogoLoop
                             logos={techLogos.map((logo) => ({
                                 ...logo,

@@ -3,6 +3,8 @@ import Beams from './React/Beams/Beams'
 import Home from './components/Home'
 import Nav from './components/Nav'
 import About from './components/About'
+import Proyects from './components/Proyects'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
         <main>
           <Home />
           <About />
+          <Proyects />
+          <Contact />
+
         </main>
       </div>
     </>
