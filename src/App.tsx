@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import TargetCursor from './React/TargetCursor/TargetCursor'
 import Beams from './React/Beams/Beams'
 import Home from './components/Home'
@@ -7,6 +8,21 @@ import Proyects from './components/Proyects'
 import Contact from './components/Contact'
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // Detectar si es móvil al cargar
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768) // md breakpoint de Tailwind
+    }
+
+    checkMobile()
+
+    // Actualizar si cambia el tamaño de la ventana
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   return (
     <>
       <div className="relative min-h-screen">
@@ -21,10 +37,12 @@ function App() {
           scale={0.2}
           rotation={30}
         />
-        <TargetCursor
-          spinDuration={3.2}
-          hideDefaultCursor={true}
-        />
+        {!isMobile && (
+          <TargetCursor
+            spinDuration={3.2}
+            hideDefaultCursor={true}
+          />
+        )}
         <main>
           <Home />
           <About />
