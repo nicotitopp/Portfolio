@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import About from './components/About'
 import Proyects from './components/Proyects'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   const [isMobile, setIsMobile] = useState(false)
@@ -48,6 +49,7 @@ function App() {
           <About />
           <Proyects />
           <Contact />
+          <Footer />
 
         </main>
       </div>

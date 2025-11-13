@@ -31,7 +31,7 @@ const techLogos = [
 
 const Home: React.FC = () => {
     return (
-        <section className="min-h-screen flex items-center px-6 md:px-12 mt-20">
+        <section id="home" className="min-h-screen flex items-center px-6 md:px-12 mt-20">
             <div className="max-w-7xl w-full mx-auto">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                     {/* Left column: paragraph + title (you can edit the paragraph below) */}
@@ -96,7 +96,9 @@ const Home: React.FC = () => {
                                 </a>
 
                                 <a
-                                    href="mailto:dilan182003@gmail.com"
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=dilan182003@gmail.com&su=Hello%20Nicolas"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     aria-label="Enviar correo - Gmail"
                                     className="cursor-target group inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-white/20"
                                 >

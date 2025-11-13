@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     githubUrl,
 }) => {
     return (
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden cursor-target transition-all duration-300 hover:bg-white/10 hover:border-white/20 group">
+        <div className=" bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden cursor-target transition-all duration-300 hover:bg-white/10 hover:border-white/20 group ">
             {/* Image container */}
             {imageUrl && (
                 <div className="w-full h-48 overflow-hidden relative">
@@ -81,7 +81,7 @@ const Projects: React.FC = () => {
     const featuredProjects: ProjectCardProps[] = [
         {
             title: "El Naranjal",
-            description: "El Naranjal es la página web oficial del restaurante del mismo nombre, un lugar donde la tradición y el sabor se encuentran.Este proyecto fue diseñado para ofrecer una experiencia agradable, moderna y fácil de navegar, mostrando el menú, la historia del restaurante y las opciones de contacto.",
+            description: "El Naranjal is the official website of the restaurant of the same name, a place where tradition and flavor meet. This project was designed to offer a pleasant, modern, and easy-to-navigate experience, showcasing the menu, the restaurant's history, and contact options.",
             tags: ["HTML5", "CSS3", "Bootstrap 5", "JavaScript"],
             imageUrl: "/imagenProyecto1.png",
             liveUrl: "https://www.restauranteelnaranjal.com/",
@@ -119,8 +119,8 @@ const Projects: React.FC = () => {
     ]; 
 
     
-    return ( 
-        <section id="projects" className="min-h-screen flex items-start px-6 md:px-12 pt-12 pb-20">
+    return (
+        <section id="projects" className="flex items-start px-6 md:px-12 py-16">
             <div className="max-w-7xl w-full mx-auto">
                 <div className="relative mb-16">
                     <h2 className="cursor-target relative left-0 md:-left-2 text-6xl md:text-7xl font-extrabold text-white">

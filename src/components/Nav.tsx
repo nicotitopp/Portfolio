@@ -13,6 +13,12 @@ const Nav: React.FC = () => {
                             <a
                                 href="#home"
                                 className="text-white font-semibold text-lg select-none"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#home')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                }}
                             >
                                 Portfolio
                             </a>

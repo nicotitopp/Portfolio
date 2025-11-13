@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BlurText from '../React/BlurText/BlurText';
 
 const Contacta: React.FC = () => {
     const [name, setName] = useState('');
@@ -22,14 +23,14 @@ const Contacta: React.FC = () => {
             return;
         }
 
-        // Crear mailto con subject y body
-        const subject = encodeURIComponent(`Contacto desde web - ${name}`);
-        const body = encodeURIComponent(`Nombre: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0A${message}`);
-        const mailto = `mailto:${siteEmail}?subject=${subject}&body=${body}`;
+        // Abrir Gmail en nueva pestaña con asunto y body
+        const subject = encodeURIComponent(`Hello Nicolas`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${siteEmail}&su=${subject}&body=${body}`;
 
-        // Abrir cliente de correo
-        window.location.href = mailto;
+        window.open(gmailUrl, '_blank');
         setStatus('sent');
+        setTimeout(() => setStatus('idle'), 1500);
     };
 
     const handleCopyEmail = async () => {
@@ -45,13 +46,22 @@ const Contacta: React.FC = () => {
 
     return (
         <section id="contact" className="min-h-[60vh] flex items-center px-6 md:px-12 py-16">
-            <div className="max-w-4xl w-full mx-auto">
-                <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">Get in touch</h2>
+            <div className="max-w-7xl w-full mx-auto">
+                <div className="relative mb-16">
+                    <h2 className="cursor-target relative left-0 md:-left-2 text-6xl md:text-7xl font-extrabold text-white">
+                        <BlurText
+                            text="Contact"
+                            delay={385}
+                            animateBy="letters"
+                            direction="bottom"
+                        />
+                    </h2>
+                </div> 
 
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Left: Información + acciones */}
                     <div className="space-y-6">
-                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                        <div className="cursor-target bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                             <h3 className="text-xl font-semibold text-white mb-2">Say hi 👋</h3>
                             <p className="text-gray-300">If you'd like to collaborate or say hello, send me a message here or copy my email and contact me directly.</p>
                             <div className="mt-6 flex items-center gap-3">
@@ -62,7 +72,14 @@ const Contacta: React.FC = () => {
                                 >
                                     Copy email
                                 </button>
-                                <a href={`mailto:${siteEmail}`} className="px-4 py-2 bg-transparent text-white/90 hover:text-white rounded-lg border border-white/10 transition">Open email client</a>
+                                <a 
+                                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${siteEmail}&su=${encodeURIComponent('Hello Nicolas')}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-4 py-2 bg-transparent text-white/90 hover:text-white rounded-lg border border-white/10 transition"
+                                >
+                                    Open Gmail
+                                </a>
                             </div>
                             {status === 'sent' && (
                                 <p className="mt-4 text-sm text-green-300">Copied / opening mail client...</p>
@@ -72,7 +89,7 @@ const Contacta: React.FC = () => {
                             )}
                         </div>
 
-                        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                        <div className="cursor-target bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                             <h4 className="text-white font-semibold mb-2">Other ways</h4>
                             <ul className="text-gray-300 space-y-2">
                                 <li>LinkedIn: <a className="text-white underline" href="https://www.linkedin.com/in/dilan-nicolas-pe%C3%B1a-866775254/" target="_blank" rel="noreferrer">Profile</a></li>
@@ -82,7 +99,7 @@ const Contacta: React.FC = () => {
                     </div>
 
                     {/* Right: Form */}
-                    <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                    <form onSubmit={handleSubmit} className="cursor-target bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                         <label className="block mb-3">
                             <span className="text-gray-300 text-sm">Name</span>
                             <input
