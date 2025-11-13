@@ -37,7 +37,7 @@
 </p>
 
 <p align="center">
-  <a href="nicolaspena.vercel.app" target="_blank" style="background-color:#f57c00; color:white; padding:10px 20px; text-decoration:none; border-radius:6px; font-weight:bold;">
+  <a href="https://nicolaspena.vercel.app/" target="_blank" style="background-color:#f57c00; color:white; padding:10px 20px; text-decoration:none; border-radius:6px; font-weight:bold;">
     🔗 Visit My Portfolio
   </a>
 </p>
