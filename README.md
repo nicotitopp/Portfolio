@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+<h1 align="center">🌐 Personal Portfolio — Nicolás</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  Welcome to my personal <b>portfolio website</b>!  
+  This site showcases my <b>projects</b>, <b>contact information</b>, and a short section <b>about me</b>.
+</p>
 
-Currently, two official plugins are available:
+<img width="1905" height="946" alt="image" src="https://github.com/user-attachments/assets/30f9be32-54a3-42cb-bbde-6db6266a95c7" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>🧑‍💻 About</h2>
+<p>
+  I’m a passionate <b>web developer</b> from Colombia who enjoys creating clean, responsive, and user-friendly websites.  
+  This portfolio represents my work, my learning journey, and the tools I use to bring ideas to life.
+</p>
 
-## React Compiler
+<h2>🚀 Projects</h2>
+<p>
+  In the projects section, you’ll find a selection of the websites and applications I’ve built — each one showing my growth and creativity in web development.
+</p>
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+<h2>📬 Contact</h2>
+<p>
+  If you’d like to get in touch, collaborate, or just say hi, feel free to reach out through the <b>contact section</b> of the site.
+</p>
 
-## Expanding the ESLint configuration
+<h2>🛠️ Built With</h2>
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>Bootstrap</li>
+</ul>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<h2>💡 Purpose</h2>
+<p>
+  This portfolio was created to display my skills and experience as a front-end developer.  
+  It’s a simple yet elegant representation of my work and a way for potential collaborators or employers to connect with me.
+</p>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<p align="center">
+  <a href="nicolaspena.vercel.app" target="_blank" style="background-color:#f57c00; color:white; padding:10px 20px; text-decoration:none; border-radius:6px; font-weight:bold;">
+    🔗 Visit My Portfolio
+  </a>
+</p>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<p align="center">
+  <sub>The components <a href="https://reactbits.dev/" target="_blank">ReactBits.dev</a> ⚡</sub>
+</p>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<p align="center"><b>© 2025 Nicolás</b></p>
