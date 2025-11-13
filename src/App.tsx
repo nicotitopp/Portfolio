@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <div className="relative min-h-screen">
+  <div className="relative min-h-screen z-10">
         <Nav />
         <Beams
           beamWidth={3}

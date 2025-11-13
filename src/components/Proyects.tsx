@@ -135,7 +135,7 @@ const Projects: React.FC = () => {
 
                 {/* SECCIÓN 1: Proyectos Destacados */}
                 <div className="mb-20">
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-10">Featured Projects</h3>
+                    <h3 className="cursor-target text-2xl md:text-3xl font-bold text-white mb-10">Featured Projects</h3>
                     <div className="grid md:grid-cols-2 gap-8">
                         {featuredProjects.map((project, index) => (
                             <ProjectCard key={index} {...project} />

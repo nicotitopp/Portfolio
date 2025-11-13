@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;900&display=swap" rel="stylesheet">
+      <!-- Inline background color to prevent white flash before CSS/JS loads -->
+      <style>
+       /* applied immediately by the browser to avoid white flash on reload */
+        html, body {
+          background-color: #000000;
+          color: #ffffff;
+        }
+      </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nicolas Peña</title>
   </head>
