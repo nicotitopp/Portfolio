@@ -13,6 +13,12 @@ const Nav: React.FC = () => {
                             <a
                                 href="#home"
                                 className="text-white font-semibold text-lg select-none"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#home')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                }}
                             >
                                 Portfolio
                             </a>
@@ -21,18 +27,36 @@ const Nav: React.FC = () => {
                             <a
                                 href="#about"
                                 className="text-gray-200 hover:text-white transition"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#about')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                }}
                             >
                                 About
                             </a>
                             <a
                                 href="#projects"
                                 className="text-gray-200 hover:text-white transition"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#projects')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                }}
                             >
                                 Projects
                             </a>
                             <a
                                 href="#contact"
                                 className="text-gray-200 hover:text-white transition"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#contact')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                }}
                             >
                                 Contact
                             </a>
@@ -77,18 +101,39 @@ const Nav: React.FC = () => {
                             <a
                                 href="#about"
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#about')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                    setOpen(false); // Cierra el menú móvil después de hacer clic
+                                }}
                             >
                                 About
                             </a>
                             <a
                                 href="#projects"
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#projects')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                    setOpen(false); // Cierra el menú móvil después de hacer clic
+                                }}
                             >
                                 Projects
                             </a>
                             <a
                                 href="#contact"
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.querySelector('#contact')?.scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                    setOpen(false); // Cierra el menú móvil después de hacer clic
+                                }}
                             >
                                 Contact
                             </a>

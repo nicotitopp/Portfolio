@@ -1,19 +1,44 @@
 import React from 'react';
-import BlurText from '../../TextAnimations/BlurText/BlurText';
-import AnimatedContent from '../../Animations/AnimatedContent/AnimatedContent';
+import LogoLoop from '../React/LogoLoop/LogoLoop';
+import BlurText from '../React/BlurText/BlurText';
+import AnimatedContent from '../React/AnimatedContent/AnimatedContent';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,  SiJavascript, SiBootstrap, SiMysql, SiHtml5, SiCss3, SiMongodb, SiFigma    } from 'react-icons/si';
+
+const techColors: Record<string, string> = {
+    React: "#ffffff",
+    Next: "#ffffff",
+    TypeScript: "#ffffff",
+    Tailwind: "#ffffff",
+    JavaScript: "#ffffff"
+};
+
+const techLogos = [
+    { node: <SiReact />, title: "React" },
+    { node: <SiNextdotjs />, title: "Next.js" },
+    { node: <SiTypescript />, title: "TypeScript" },
+    { node: <SiTailwindcss />, title: "Tailwind CSS" },
+    { node: <SiJavascript />, title: "JavaScript" },
+    { node: <SiBootstrap />, title: "Bootstrap" },
+    { node: <SiMysql />, title: "Mysql" },
+    { node: <SiHtml5 />, title: "Html5" },
+    { node: <SiCss3 />, title: "Css3 " },
+    { node: <SiMongodb />, title: "Mongodb " },
+    { node: <SiFigma />, title: "Figma " }
+
+];
+
+
 
 const Home: React.FC = () => {
     return (
-        <section className="min-h-screen flex items-center px-6 md:px-12">
+        <section id="home" className="min-h-screen flex items-center px-6 md:px-12 mt-20">
             <div className="max-w-7xl w-full mx-auto">
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                     {/* Left column: paragraph + title (you can edit the paragraph below) */}
                     <div className="flex-1 md:pr-8">
                         <p className="cursor-target text-2xl text-gray-300 max-w-xl mb-6">
                             <BlurText
-                                    text="Hey there! I’m a passionate frontend developer who loves bringing ideas to life through clean,
-                                    interactive, and visually engaging web experiences. I focus on building modern, responsive, and fast interfaces
-                                    using the latest web technologies."
+                                    text= "Hey there! I'm a passionate frontend developer who loves bringing ideas to life through clean, interactive, and visually engaging web experiences. I focus on building modern, responsive, and fast interfaces using the latest web technologies."
                                     delay={80}
                                     animateBy="words"
                                     direction="bottom"
@@ -71,7 +96,9 @@ const Home: React.FC = () => {
                                 </a>
 
                                 <a
-                                    href="mailto:dilan182003@gmail.com"
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=dilan182003@gmail.com&su=Hello%20Nicolas"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     aria-label="Enviar correo - Gmail"
                                     className="cursor-target group inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:border-white/20"
                                 >
@@ -87,19 +114,36 @@ const Home: React.FC = () => {
                     {/* Right column: avatar box where you can drop /public/Avatar.png */}
                     <div className="w-72 md:w-96 shrink-0 cursor-target">
                         <div className="w-full h-72 md:h-96 bg-gray-900/30 border border-white/10 rounded-lg overflow-hidden flex items-center justify-center">
-                            {/* Image file should be placed at public/Avatar.png or served at /Avatar.png */}
                             <img
-                                src="src\Imagen\Avatar.png"
+                                src="/Avatar.png"
                                 alt="Avatar"
                                 className="w-full h-full object-cover"
-                                onError={(e) => {
-                                    // If Avatar.png is missing show a subtle placeholder
-                                    (e.currentTarget as HTMLImageElement).src = '/placeholder-avatar.png';
-                                }}
                             />
                         </div>
                     </div>
                 </div>
+                <div className="mt-40">
+                    <div style={{ height: '100px', position: 'relative', overflow: 'hidden'}}>
+                        <LogoLoop
+                            logos={techLogos.map((logo) => ({
+                                ...logo,
+                                node: React.cloneElement(logo.node, {
+                                className: `transition-colors duration-300 hover:scale-110`,
+                                style: { color: techColors[logo.title.split(" ")[0]] || "#fff" }
+                                }),
+                            }))}
+                            speed={50}
+                            direction="left"
+                            logoHeight={45}
+                            gap={65 }
+                            pauseOnHover
+                            scaleOnHover
+                            fadeOut
+                            fadeOutColor="#000000"
+                        />
+                    </div>
+                </div>
+                
             </div>
         </section>
     );
