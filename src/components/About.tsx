@@ -6,7 +6,7 @@ const About: React.FC = () => {
     return (
         <section id="about" className="flex items-start px-6 md:px-12 py-16">
             <div className="max-w-7xl w-full mx-auto">
-                {/* Título de la sección */}
+                {/* Section title */}
                 <div className="relative mb-12">
                     <h2 className="cursor-target relative left-0 md:-left-2 text-6xl md:text-7xl font-extrabold text-white">
                         <BlurText
@@ -16,10 +16,13 @@ const About: React.FC = () => {
                             direction="bottom"
                         />
                     </h2>
+                    <p className="mt-4 text-gray-400 text-lg max-w-2xl">
+                        Bridging software development, workflow automation, and IT infrastructure.
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    {/* Card 1 */}
+                    {/* Card 1: Who I am */}
                     <AnimatedContent
                         distance={60}
                         direction="vertical"
@@ -32,14 +35,17 @@ const About: React.FC = () => {
                         threshold={0.15}
                         delay={0.1}>
                         <div className="h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 cursor-target transition-all duration-300 hover:bg-white/10">
-                            <h3 className="text-white text-xl font-semibold mb-3">Who I am</h3>
-                            <p className="text-gray-300 text-lg leading-relaxed">
-                                I'm Nicolás, a frontend developer from Colombia who loves crafting clean, interactive, and human-centered digital experiences. I mix creativity and logic to turn ideas into something people can actually enjoy using.
+                            <div className="flex items-center gap-3 mb-3">
+                                <span className="text-2xl">👨‍💻</span>
+                                <h3 className="text-white text-xl font-semibold">Who I am</h3>
+                            </div>
+                            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                                I'm Dilan Nicolás Peña, a Software Development Technologist based in Cali, Colombia. I combine strong analytical problem-solving with web development, enterprise IT support, and automation to turn business challenges into efficient digital systems.
                             </p>
                         </div>
                     </AnimatedContent>
 
-                    {/* Card 2 */}
+                    {/* Card 2: What I do */}
                     <AnimatedContent
                         distance={60}
                         direction="vertical"
@@ -52,14 +58,17 @@ const About: React.FC = () => {
                         threshold={0.15}
                         delay={0.15}>
                         <div className="h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 cursor-target transition-all duration-300 hover:bg-white/10">
-                            <h3 className="text-white text-xl font-semibold mb-3">What I do</h3>
-                            <p className="text-gray-300 text-lg leading-relaxed">
-                                I specialize in building responsive and dynamic web apps using React, Vite, and Tailwind CSS. I'm also comfortable working with APIs, state management, and creating clean, scalable component structures.
+                            <div className="flex items-center gap-3 mb-3">
+                                <span className="text-2xl">⚡</span>
+                                <h3 className="text-white text-xl font-semibold">What I do</h3>
+                            </div>
+                            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                                I build modern web applications using React, TypeScript, and Tailwind CSS. Beyond web development, I develop AI-driven automation solutions, integrate platforms via REST APIs (Close CRM, Instantly), manage relational databases (SQL / MySQL), and handle IT asset infrastructure.
                             </p>
                         </div>
                     </AnimatedContent>
 
-                    {/* Card 3 */}
+                    {/* Card 3: Education & Credentials */}
                     <AnimatedContent
                         distance={60}
                         direction="vertical"
@@ -72,14 +81,28 @@ const About: React.FC = () => {
                         threshold={0.15}
                         delay={0.2}>
                         <div className="h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 cursor-target transition-all duration-300 hover:bg-white/10">
-                            <h3 className="text-white text-xl font-semibold mb-3">My vision</h3>
-                            <p className="text-gray-300 text-lg leading-relaxed">
-                                I believe good design is invisible — it should just feel right. My goal is to keep learning, keep creating, and keep making the web a little more aesthetic and human.
-                            </p>
+                            <div className="flex items-center gap-3 mb-3">
+                                <span className="text-2xl">🎓</span>
+                                <h3 className="text-white text-xl font-semibold">Education & Credentials</h3>
+                            </div>
+                            <ul className="space-y-3 text-gray-300 text-sm md:text-base leading-relaxed">
+                                <li>
+                                    <strong className="text-white">Multimedia Engineering</strong> (In progress)
+                                    <span className="block text-gray-400 text-xs">Universidad Nacional Abierta y a Distancia (UNAD)</span>
+                                </li>
+                                <li>
+                                    <strong className="text-white">Software Development Technology</strong> (2022 – 2026)
+                                    <span className="block text-gray-400 text-xs">Universidad del Valle · Solid foundations in networks, databases & software engineering</span>
+                                </li>
+                                <li>
+                                    <strong className="text-white">Digital Transformation & IT Support</strong> (2025)
+                                    <span className="block text-gray-400 text-xs">SENA Trainee Certification</span>
+                                </li>
+                            </ul>
                         </div>
                     </AnimatedContent>
 
-                    {/* Card 4 */}
+                    {/* Card 4: Languages & Highlights */}
                     <AnimatedContent
                         distance={60}
                         direction="vertical"
@@ -92,11 +115,27 @@ const About: React.FC = () => {
                         threshold={0.15}
                         delay={0.25}>
                         <div className="h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 cursor-target transition-all duration-300 hover:bg-white/10">
-                            <h3 className="text-white text-xl font-semibold mb-4">Fun facts about me</h3>
-                            <ul className="space-y-4 text-gray-300">
-                                <li className="flex items-center gap-4"><span className="text-2xl">☕</span><span>Coffee-powered developer</span></li>
-                                <li className="flex items-center gap-4"><span className="text-2xl">🎧</span><span>Music makes me code faster</span></li>
-                                <li className="flex items-center gap-4"><span className="text-2xl">🏍️</span><span>Big fan of late-night rides</span></li>
+                            <div className="flex items-center gap-3 mb-4">
+                                <span className="text-2xl">🌐</span>
+                                <h3 className="text-white text-xl font-semibold">Languages & Strengths</h3>
+                            </div>
+                            <ul className="space-y-3 text-gray-300 text-sm md:text-base">
+                                <li className="flex items-center gap-3">
+                                    <span className="text-lg">🗣️</span>
+                                    <span><strong>Spanish:</strong> Native · <strong>English:</strong> B1 (technical reading & conversational practice)</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="text-lg">📊</span>
+                                    <span>Database control, data validation, and automated reporting</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="text-lg">🛠️</span>
+                                    <span>Root-cause incident diagnosis & enterprise SaaS support</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="text-lg">☕</span>
+                                    <span>Fast learner, detail-oriented, and coffee-fueled coder</span>
+                                </li>
                             </ul>
                         </div>
                     </AnimatedContent>

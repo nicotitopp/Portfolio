@@ -4,6 +4,7 @@ import Beams from './React/Beams/Beams'
 import Home from './components/Home'
 import Nav from './components/Nav'
 import About from './components/About'
+import Experience from './components/Experience'
 import Proyects from './components/Proyects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <>
-  <div className="relative min-h-screen z-10">
+      <div className="relative min-h-screen">
         <Nav />
         <Beams
           beamWidth={3}
@@ -47,10 +48,10 @@ function App() {
         <main>
           <Home />
           <About />
+          <Experience />
           <Proyects />
           <Contact />
           <Footer />
-
         </main>
       </div>
     </>

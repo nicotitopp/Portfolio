@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 
-
 const Nav: React.FC = () => {
     const [open, setOpen] = useState(false);
+
+    const scrollTo = (selector: string) => {
+        document.querySelector(selector)?.scrollIntoView({
+            behavior: 'smooth'
+        });
+        setOpen(false);
+    };
 
     return (
         <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50">
@@ -12,55 +18,69 @@ const Nav: React.FC = () => {
                         <div className="flex items-center">
                             <a
                                 href="#home"
-                                className="text-white font-semibold text-lg select-none"
+                                className="text-white font-semibold text-lg select-none flex items-center gap-2"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.querySelector('#home')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
+                                    scrollTo('#home');
                                 }}
                             >
-                                Portfolio
+                                <span className="text-indigo-400 font-bold">&lt;/&gt;</span>
+                                <span>Dev-Peña</span>
                             </a>
                         </div>
+
+                        {/* Desktop Links */}
                         <div className="hidden md:flex md:items-center md:space-x-8">
                             <a
                                 href="#about"
-                                className="text-gray-200 hover:text-white transition"
+                                className="text-gray-200 hover:text-white transition text-sm font-medium"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.querySelector('#about')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
+                                    scrollTo('#about');
                                 }}
                             >
                                 About
                             </a>
                             <a
-                                href="#projects"
-                                className="text-gray-200 hover:text-white transition"
+                                href="#experience"
+                                className="text-gray-200 hover:text-white transition text-sm font-medium"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.querySelector('#projects')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
+                                    scrollTo('#experience');
+                                }}
+                            >
+                                Experience
+                            </a>
+                            <a
+                                href="#projects"
+                                className="text-gray-200 hover:text-white transition text-sm font-medium"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    scrollTo('#projects');
                                 }}
                             >
                                 Projects
                             </a>
                             <a
                                 href="#contact"
-                                className="text-gray-200 hover:text-white transition"
+                                className="text-gray-200 hover:text-white transition text-sm font-medium"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.querySelector('#contact')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
+                                    scrollTo('#contact');
                                 }}
                             >
                                 Contact
                             </a>
+                            <a
+                                href="/CV_Dilan_Nicolas_Pena_English.pdf"
+                                download="CV_Dilan_Nicolas_Pena_English.pdf"
+                                className="px-3.5 py-1.5 rounded-lg bg-indigo-500/20 text-indigo-200 text-xs font-semibold border border-indigo-400/30 hover:bg-indigo-500/30 transition-all hover:scale-105"
+                            >
+                                CV PDF ↓
+                            </a>
                         </div>
+
+                        {/* Mobile hamburger */}
                         <div className="md:hidden">
                             <button
                                 aria-label="Toggle menu"
@@ -97,29 +117,33 @@ const Nav: React.FC = () => {
                 {/* Mobile menu */}
                 {open && (
                     <div className="md:hidden px-4 pb-4">
-                        <div className="flex flex-col space-y-2">
+                        <div className="flex flex-col space-y-2 pt-2 border-t border-white/10">
                             <a
                                 href="#about"
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.querySelector('#about')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                    setOpen(false); // Cierra el menú móvil después de hacer clic
+                                    scrollTo('#about');
                                 }}
                             >
                                 About
+                            </a>
+                            <a
+                                href="#experience"
+                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    scrollTo('#experience');
+                                }}
+                            >
+                                Experience
                             </a>
                             <a
                                 href="#projects"
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.querySelector('#projects')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                    setOpen(false); // Cierra el menú móvil después de hacer clic
+                                    scrollTo('#projects');
                                 }}
                             >
                                 Projects
@@ -129,13 +153,18 @@ const Nav: React.FC = () => {
                                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    document.querySelector('#contact')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                    setOpen(false); // Cierra el menú móvil después de hacer clic
+                                    scrollTo('#contact');
                                 }}
                             >
                                 Contact
+                            </a>
+                            <a
+                                href="/CV_Dilan_Nicolas_Pena_English.pdf"
+                                download="CV_Dilan_Nicolas_Pena_English.pdf"
+                                className="block px-3 py-2 rounded-md text-base font-medium text-indigo-300 hover:text-white bg-indigo-500/10"
+                                onClick={() => setOpen(false)}
+                            >
+                                📄 Download CV (PDF)
                             </a>
                         </div>
                     </div>
